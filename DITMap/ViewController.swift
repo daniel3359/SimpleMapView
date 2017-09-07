@@ -97,7 +97,7 @@ class ViewController: UIViewController, MKMapViewDelegate{
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
         
-        print("call out acssory Tappad!")
+//        print("call out acssory Tappad!")
         
         let viewAnno = view.annotation
         let viewTitle: String = ((viewAnno?.title)!)!
@@ -105,7 +105,7 @@ class ViewController: UIViewController, MKMapViewDelegate{
         
         print("\(viewTitle) \(viewSubTitle)")
         
-        let ac = UIAlertController(title: viewTitle, message: viewSubTitle, preferredStyle: .alert)
+        let ac = UIAlertController(title: viewTitle, message: viewSubTitle, preferredStyle: .alert)//alert대신 actionSheet도가능
         ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(ac, animated: true, completion: nil)
     }
